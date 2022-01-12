@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #101536;
+}
+.fb-like-menu{
+    position: relative;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.fb-like-menu input{
+ display: none;
+}
+.fb-like-menu label{
+    position: relative;
+    width: 0;
+    height: 128px;
+    cursor: pointer;
+    transition: 0.5s;
+    filter: grayscale(1);
+    text-align: center;
+    opacity: 0;
+}
+.fb-like-menu:hover label{
+    width: 120px;
+    opacity: 0.2;
+}
+.fb-like-menu input:hover + label,
+.fb-like-menu input:checked + label{
+    width: 120px;
+    opacity: 1;
+    filter: grayscale(0);
+}
+.fb-like-menu label h4{
+    color: #fff;
+    font-size: 24px;
+    padding-top: 10px;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    transform: translateY(0) scale(0);
+    transition: 0.5s;
+}
+.fb-like-menu input:hover + label h4,
+.fb-like-menu input:checked + label h4{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+.text{
+    position: absolute;
+    top: 29%;
+    color: #fff;
+    font-family: -webkit-pictograph;
+}
+img{
+    width: 80px;
+    height: 80px;
+}
